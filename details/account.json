@@ -1,1 +1,9 @@
-[{"username":"roshab","password":"s","fullname":"h","age":20},{"username":"anish","age":20,"fullname":"roshan lkara","password":"123"}]
+[
+    {
+        "name": "roshan",
+        "dob": "19-12-2001",
+        "roll": "fsd",
+        "email": "roshanlakra19122000@gmail.com",
+        "password": "asdfsadf"
+    }
+]

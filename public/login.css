@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    background-color: powderblue;
+}
+
+.head-canvas {
+    background-color: rgba(34, 43, 58, 100%);
+    width: 100%;
+    height: 80px;
+}
+
+.head-insti-logo {
+    float: left;
+    color: white;
+    padding-left: 25px;
+    padding-top: 13px;
+    /* not making any difference
+    padding-bottom: 50px;
+    */
+
+    /*no use*/
+    width: 10px;
+    height: 10px;
+    float: left;
+
+}
+
+.head-irlogo {
+    padding-left: 60px;
+    padding-top: 15px;
+    
+    float: left;
+}
+
+.head-sep {
+    float: left;
+    padding-left: 10px;
+    padding-top: 14px;
+    font-size: 40px;
+    transform: scaleY(2);
+    color: white;
+}  
+
+.brand {
+    float: left;
+    padding-left: 10px;
+    color: green;
+    font-size: 27px;
+} 
+
+.cell-name {
+    padding-top: 10px;
+    color: white;
+    font-family: 'Gilroy';
+}
+
+.insti-name {
+    color: rgb(87, 117, 180);
+}
+
+/* flex container with 5 items */
+.navbar {
+    float: left;
+    display: flex;
+    /* padding-right: 5px;
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-bottom: 15px; */
+    /* background-color: orange; */
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 210px;
+
+}
+/* flex items */
+.navbar > div {
+    color: white;
+    background-color: rebeccapurple;
+    width: 130px;
+    margin-right: 10px;
+    margin-top: 15px;
+    margin-bottom: 14px;
+    margin-left: 0px;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+
+
+    height: 30px;
+
+    cursor: pointer;
+
+}
+.navbar > div:hover{
+    background-color: rgb(41, 68, 113);
+    border-bottom: 2px;
+    cursor: pointer;
+
+}
+.acc {
+    float: right;
+    width: 50px;
+    height: 50px;
+    margin-right: 30px;
+    margin-top: 15px;
+    margin-bottom: 14px;
+    margin-left: 0px;
+    background-color: brown;
+    border-radius: 50%;
+    
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    background: url(assets/profile.png);
+    background-size: cover;
+    border: 2px solid white;
+}
+.acc:hover{
+    background-color: rgb(41, 68, 113);
+
+}
+
+/* ____________________________________________________________________________________________________________________________________________ */
+
+
+/* flex container */
+.template {
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid red; */
+    background-color: #FFDEAD;
+
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 50px;
+    padding-top: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 30px;
+    
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* flex box */
+.form {
+    color: greenyellow;
+    /* background-color: orange; */
+    padding-bottom: 0px;
+    
+
+}
+
+.register{
+    color: black;
+    font-weight: 900;
+    font-size: 38px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    /* margin-left: 5px; */
+}
+
+.button {
+    /* border: 2px solid red; */
+    margin: auto;
+    /* allign itself at center */
+
+    margin-top: 10px;
+    padding: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    /* background-color: green; */
+    
+}
+
+
+#email, #name, #dob, #roll, #password {
+    border: 1.5px solid black;
+}
+
+
+
+
+.empty {
+    padding-bottom: 200px;
+}
+
+.form{
+    color: black;
+    font-size: 20px;
+}
+
+input[type=text], input[type=password] {
+    width: 90%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    border-radius: 5px;
+    background: #f1f1f1;
+  }
+  
+.apply {
+    background-color: rgb(41, 68, 113);
+    /* background-color: green; */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 100px;
+    text-align: center;
+    font-size: 17px;
+    margin-top: 10px;
+
+    opacity: 1;
+    transition: 0.3s;
+    /* distinct feature */
+    cursor: pointer;
+}
+
+.apply:hover {opacity: 0.7}
+
+/* ____________________________________________________________________________________________________________________________________________ */
+.foot1 {
+    background-color: rgb(79, 150, 72);
+    color: white;
+    text-align: center;
+    border: .5px solid black;
+
+    font-size: 20px;
+    width: 100%;
+    height: 25px;
+    
+    margin-top: 10px;
+}
+

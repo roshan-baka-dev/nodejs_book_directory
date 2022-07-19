@@ -9,7 +9,7 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-
+app.use('/',express.static("./public"));
 // routes
 
 //to view the list
@@ -35,10 +35,12 @@ app.post('/user/add',(req,res)=>{
 
     const userData=req.body;
 
+    console.log(userData);
+
     //checking for missing data
-    if (userData.fullname == null || userData.age == null || userData.username == null || userData.password == null) {
-        return res.status(401).send({error: true, msg: 'User data missing'})
-    }
+    // if (userData.fullname == null || userData.age == null || userData.username == null || userData.password == null) {
+    //     return res.status(401).send({error: true, msg: 'User data missing'})
+    // }
     
 
     //checking for a duplicate username
