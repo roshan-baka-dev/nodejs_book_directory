@@ -15,8 +15,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //to view the list
 app.get('/user/list',(req,res)=>{
     try{
-        const users=fs.readFileSync(__dirname+'/details/account.json','utf8');
-        const data=JSON.parse(users);
+        const users=getUserData();
         res.send(users);
     }catch(err){
         console.log("invalid json",err)
@@ -29,7 +28,7 @@ app.post('/user/add',(req,res)=>{
 
 
     //reading file from account.json file  ...returns a string
-    const users=fs.readFileSync(__dirname+'/details/account.json','utf8');
+    const users=getUserData();
 
     //converting string to json
     const jsonUser=JSON.parse(users);
@@ -57,7 +56,7 @@ app.post('/user/add',(req,res)=>{
     const strData=JSON.stringify(jsonUser);
 
     //writing the string to account.json
-    fs.writeFileSync(__dirname+'/details/account.json',strData);
+    saveUserData(strData);
 
     //sending success message
     res.send({success:true,msg:"user data added successfully"});
@@ -69,7 +68,7 @@ app.delete('/user/delete/:username',(req,res)=>{
     const username=req.params.username;
     console.log(username);
      //reading file from account.json file  ...returns a string
-     const users=fs.readFileSync(__dirname+'/details/account.json','utf8');
+     const users=getUserData();
 
      //converting string to json
      const jsonUser=JSON.parse(users);
@@ -81,10 +80,22 @@ app.delete('/user/delete/:username',(req,res)=>{
 
     console.log(strData);
     //writing the string to account.json
-    fs.writeFileSync(__dirname+'/details/account.json',strData);
+    saveUserData();
 
     res.send({sucess:true,msg:`user ${username} deleted`});
 })
+
+
+
+const saveUserData=(data)=>{
+    // const stringifyData=JSON.stringify(data);
+    fs.writeFileSync(__dirname+'/details/account.json',data);
+}
+
+const getUserData=()=>{
+    const jsonData=fs.readFileSync(__dirname+'/details/account.json','utf8');
+    return jsonData;
+}
 
 app.listen(3000, () => {
   console.log("listening at port 3000.......");
